@@ -17,7 +17,7 @@ namespace MyPortfolio.Migrations
                 {
                     AboutId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Title = table.Column<string>(type: "nvarchar(200)", nullable: false),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     SubDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Details = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },

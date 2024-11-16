@@ -28,7 +28,6 @@
 									<th scope="col">Mesajı Aç</th>
 									<th scope="col">Durum</th>
 									<th scope="col">Sil</th>
-									<th scope="col">Güncelle</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -39,7 +38,7 @@
 										<td>@item.NameSurname</td>
 										<td>@item.Subject</td>
 										<td>@item.SendDate.ToShortDateString()</td>
-										<td><a href="/Experience/DeleteExperience/@item.MessageId" class="btn btn-warning">Mesajı Aç</a></td>
+										<td><a href="/Message/MessageDetail/@item.MessageId" class="btn btn-warning">Mesajı Aç</a></td>
 										@if (item.IsRead == true)
 										{
 											<td><a href="/Message/ChangeIsReadToFalse/@item.MessageId" class="btn btn-dark">Okunmadı Olarak İşaretle</a></td>
@@ -49,8 +48,7 @@
 											<td><a href="/Message/ChangeIsReadToTrue/@item.MessageId" class="btn btn-info">Okundu Olarak İşaretle</a></td>
 										}
 
-										<td><a href="/Experience/UpdateExperience/@item.MessageId" class="btn btn-danger">Sil</a></td>
-										<td><a href="/Experience/UpdateExperience/@item.MessageId" class="btn btn-success">Güncelle</a></td>
+												<td><a href="/Message/DeleteMessage/@item.MessageId" class="btn btn-danger">Sil</a></td>
 									</tr>
 								}
 							</tbody>

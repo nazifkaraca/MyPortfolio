@@ -27,5 +27,19 @@ namespace MyPortfolio.Controllers
 			portfolioContext.SaveChanges();
 			return RedirectToAction("Inbox");
 		}
+
+		public IActionResult DeleteMessage(int id)
+		{
+			var value = portfolioContext.Messages.Find(id);
+			portfolioContext.Messages.Remove(value);
+			portfolioContext.SaveChanges();
+			return RedirectToAction("Inbox");
+		}
+
+		public IActionResult MessageDetail(int id)
+		{
+			var value = portfolioContext.Messages.Find(id);
+			return View(value);
+		}
 	}
 }

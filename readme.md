@@ -24,8 +24,7 @@ A personal portfolio website to showcase your skills, projects, and professional
 
 - **HTML5** and **CSS3** for structure and styling
 - **JavaScript** for interactive elements
-- **React.js** (or specify if another framework/library is used)
-- **EmailJS** for handling form submissions (optional)
+- **C#** and **Entity Framework** for back-end
 
 ## Installation
 
